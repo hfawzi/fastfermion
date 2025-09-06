@@ -3,7 +3,7 @@
 **fastfermion** is a Python package written in C++ for the efficient manipulation of polynomials in Pauli, Fermi and Majorana operators.
 
 <p align="center">
-<img alt="Computing the Jordan-Wigner transform of a CrO molecule Hamiltonian with > 10^5 terms" src="jwperf.svg" style="max-height: 70px;" /><br />
+<img alt="Computing the Jordan-Wigner transform of a CrO molecule Hamiltonian with > 10^5 terms" src="assets/jwperf.svg" style="max-height: 70px;" /><br />
 <i>
 Computing the Jordan-Wigner transform of a CrO molecule Hamiltonian with > 10<sup>5</sup> terms</i>
 </p>
