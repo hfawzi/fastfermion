@@ -16,7 +16,7 @@ Computing the Jordan-Wigner transform of a CrO molecule Hamiltonian with > 10<su
 * Sparse matrix representations
 * Heisenberg evolution: Propagate polynomial through a sequence of unitaries/gates with possible truncation by degree
 * Interface with OpenFermion and Cirq
-* Up to 100x faster than OpenFermion
+* Up to 200x faster than OpenFermion
 * More to come ...
 
 **Important**: The package is still under development and so the API may change at any time.
