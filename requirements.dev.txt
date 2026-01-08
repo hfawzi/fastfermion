@@ -1,0 +1,6 @@
+# For development only
+pytest
+pybind11
+scipy
+openfermion
+cirq

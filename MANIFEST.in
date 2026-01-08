@@ -1,0 +1,2 @@
+recursive-include src *.h
+include src/python_bind.cpp

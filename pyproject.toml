@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools","wheel","pybind11"]
+build-backend = "setuptools.build_meta"
+
+[tool.cibuildwheel]
+test-requires = ["pytest","openfermion","cirq"]
+test-sources = ["test"]
+test-command = "pytest test/"
+
+# Builds to skip
+skip = ["*-win32", "*-manylinux_i686", "*musllinux*", "cp314t-*"]
+test-skip = "cp314-macosx_universal2:x86_64"
+
+# For MacOS build a universal wheel, for x86 and arm64 architectures
+[tool.cibuildwheel.macos]
+archs = ["universal2"]

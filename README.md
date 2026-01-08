@@ -28,6 +28,25 @@ fastfermion is available on PyPI:
 pip3 install fastfermion
 ```
 
+### Building from source
+
+Assuming you have a modern C++ compiler, simply run from the root directory of the package:
+
+```shell
+make ffcore
+```
+
+This will create a binary file `ffcore...` inside the `fastfermion` subdirectory.
+To import the package in Python, just add the root fastfermion directory in your path, e.g.,
+
+```python
+>>> import sys
+>>> sys.path.insert(0,"/path/to/fastfermion")
+>>> import fastfermion
+```
+
+You could also use the library directly in your C++ project (even though the library was primarily intended to be used in Python). It is header-only, so you can just include the relevant header files from `src/`.
+
 ## Resources
 
 * [A tour of fastfermion](https://www.fastfermion.com/tour/)
