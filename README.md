@@ -1,5 +1,5 @@
 [![PyPi](https://img.shields.io/pypi/v/fastfermion.svg)](https://pypi.python.org/pypi/fastfermion/)
-
+[![Docs](https://img.shields.io/badge/docs-grey)](https://www.fastfermion.com/)
 
 **fastfermion** is a Python package written in C++ for the efficient manipulation of polynomials in Pauli, Fermi and Majorana operators.
 
@@ -28,6 +28,14 @@ fastfermion is available on PyPI:
 pip3 install fastfermion
 ```
 
+Then you should be able to 
+
+```python
+import fastfermion
+```
+
+from Python. See the `examples` folder to get started, or check out [this tour of fastfermion](https://www.fastfermion.com/tour/).
+
 ### Building from source
 
 Assuming you have a modern C++ compiler, simply run from the root directory of the package:
@@ -46,8 +54,3 @@ To import the package in Python, just add the root fastfermion directory in your
 ```
 
 You could also use the library directly in your C++ project (even though the library was primarily intended to be used in Python). It is header-only, so you can just include the relevant header files from `src/`.
-
-## Resources
-
-* [A tour of fastfermion](https://www.fastfermion.com/tour/)
-* Examples: see the `examples/` folder
