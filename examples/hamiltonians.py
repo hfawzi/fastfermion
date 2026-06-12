@@ -1,13 +1,21 @@
 from fastfermion import MajoranaPolynomial, PauliPolynomial, FermiPolynomial, majoranas, paulis, fermis
 
+def chainedges(N:int, pbc: bool) -> list[tuple[int,int]]:
+    """
+    Returns list of edges of a N-chain
+    """
+    return [(i, (i + 1)%N) for i in range(N-1+pbc)]
+
 def gridedges(Nx,Ny,pbcx,pbcy) -> list[tuple[int,int]]:
     """
-    Return list of edges with a Nx * Ny square grid
+    Returns list of edges of a Nx * Ny square grid
     """
+    if Nx == 1: return chainedges(Ny,pbcy)
+    if Ny == 1: return chainedges(Nx,pbcx)
     edgelist = []
     def sub2ind(x,y): return x*Nx+y
-    for x in range(Nx+pbcx):
-        for y in range(Ny+pbcy):
+    for x in range(Nx-1+pbcx):
+        for y in range(Ny-1+pbcy):
             cur = sub2ind(x,y)
             top = sub2ind(x,(y+1)%Ny)
             right = sub2ind((x+1)%Nx,y)
