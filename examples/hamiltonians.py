@@ -13,7 +13,7 @@ def gridedges(Nx,Ny,pbcx,pbcy) -> list[tuple[int,int]]:
     if Nx == 1: return chainedges(Ny,pbcy)
     if Ny == 1: return chainedges(Nx,pbcx)
     edgelist = []
-    def sub2ind(x,y): return x*Nx+y
+    def sub2ind(x,y): return x*Ny+y
     for x in range(Nx-1+pbcx):
         for y in range(Ny-1+pbcy):
             cur = sub2ind(x,y)
